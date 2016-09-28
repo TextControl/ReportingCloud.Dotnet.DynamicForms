@@ -11,7 +11,7 @@ namespace tx_rc_forms.Controllers
         public ActionResult Index()
         {
             // create a new ReportingCloud object
-            ReportingCloud rc = new ReportingCloud("bjoern@textcontrol.com", "Visions#22");
+            ReportingCloud rc = new ReportingCloud("username", "password");
 
             // read template into byte array and upload template to RC
             byte[] bDocument = System.IO.File.ReadAllBytes(Server.MapPath("/App_Data/letter.tx"));
