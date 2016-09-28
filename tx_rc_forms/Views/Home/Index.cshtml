@@ -1,0 +1,20 @@
+﻿@model TXTextControl.ReportingCloud.TemplateInfo
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@Model.TemplateName</h2>
+
+@using (Html.BeginForm("Merge", "Home", FormMethod.Post))
+{
+    foreach (TXTextControl.ReportingCloud.MergeField field in Helpers.RemoveDuplicates(Model.MergeFields))
+    {
+        <p>
+            @Html.Label(field.Text)<br />
+            @Html.TextBox(field.Name, "", new { @class = "form-control", required = "true", placeholder = field.Name, title = "Type in the " + field.Text })
+        </p>
+    }
+
+    <input type="submit" value="Merge document" />
+}
