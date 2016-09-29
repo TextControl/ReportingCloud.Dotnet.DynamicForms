@@ -36,7 +36,7 @@ namespace tx_rc_forms.Controllers
             }
 
             // create a new ReportingCloud object
-            ReportingCloud rc = new ReportingCloud("bjoern@textcontrol.com", "Visions#22");
+            ReportingCloud rc = new ReportingCloud("username", "password");
 
             // create a MergeBody object with the form values
             MergeBody mb = new MergeBody()
